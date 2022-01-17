@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'myapp';
+  title = 'This is angular for dummies';
 
   handleEvent(){
-    console.log('Button Clicked')
+    console.log('Button Clicked', this.title)
   }
 }
