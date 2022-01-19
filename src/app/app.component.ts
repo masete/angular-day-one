@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpService } from './http.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,18 @@ export class AppComponent {
 
   newDate = new Date();
 
-  handleEvent(){
-    console.log('Button Clicked', this.title)
+
+  intro = 'Hello world how are you all ?'
+
+  constructor(private httpService:  HttpService){
+
   }
+  handleEvent(){
+    this.httpService.getRequest('https://jsonplaceholder.typicode.com/todos/1')
+    .subscribe((response) => {
+    this.jsonValue = response;
+  });
+}
+
+
 }
