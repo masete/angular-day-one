@@ -14,6 +14,8 @@ export class AppComponent {
 
   newDate = new Date();
 
+  intro = 'Hello world how are you all ?'
+
   handleEvent(){
     console.log('Button Clicked', this.title)
   }
