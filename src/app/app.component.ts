@@ -22,8 +22,11 @@ export class AppComponent {
 
   }
   handleEvent(){
-    this.httpService.getRequest('https://jsonplaceholder.typicode.com/todos/1');
-  }
+    this.httpService.getRequest('https://jsonplaceholder.typicode.com/todos/1')
+    .subscribe((response) => {
+    this.jsonValue = response;
+  });
+}
 
 
 }
