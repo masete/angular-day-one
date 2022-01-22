@@ -10,4 +10,4 @@
 <input placeholder="hello" [(ngModel)]= "title" (keydown)= 'handleEvent()'/> -->
 
 
-<app-user [user]= "userObject"></app-user>
+<app-user [user]= "userObject" (userEvent)= "handleEvent($event)"></app-user>

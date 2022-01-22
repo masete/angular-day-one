@@ -27,11 +27,15 @@ export class AppComponent {
   constructor(private httpService:  HttpService){
 
   }
-  handleEvent(){
-    this.httpService.getRequest('https://jsonplaceholder.typicode.com/todos/1')
-    .subscribe((response) => {
-    // this.jsonValue = response;
-    console.log('hello')
+  // handleEvent(){
+  //   this.httpService.getRequest('https://jsonplaceholder.typicode.com/todos/1')
+  //   .subscribe((response) => {
+  //   // this.jsonValue = response;
+  //   console.log('hello')
+  // });
+
+  handleEvent(event: any){
+    console.log(event)
   });
 }
 
