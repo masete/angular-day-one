@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 interface UserInterface{
-  name: string
-  age: number
-  id: number
+  name: string;
+  age: string;
+  id: number;
 }
 
 @Component({
@@ -15,19 +15,20 @@ export class UserComponent implements OnInit {
 
   @Input() user:UserInterface;
 
-  @Output() userEvent:EventEmitter<UserInterface>;
+  @Output() userCustomEvent:EventEmitter<UserInterface>;
 
 
   constructor() {
+    this.userCustomEvent = new EventEmitter<UserInterface>();
     this.user = {} as UserInterface
-    this.userEvent = new EventEmitter<UserInterface>();
+    
    }
 
   ngOnInit(): void {
   }
 
   sendUserEvent(): void{
-    this.userEvent.emit(this.user)
+    this.userCustomEvent.emit(this.user)
   }
 
 }

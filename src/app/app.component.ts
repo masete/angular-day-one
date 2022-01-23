@@ -7,7 +7,7 @@ import { HttpService } from './http.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'This is angular for dummies';
+  // title = 'This is angular for dummies';
   // jsonValue = {
   //   a: 'hello',
   //   b: 'world'
@@ -15,14 +15,14 @@ export class AppComponent {
 
   userObject = {
     name: 'Nicholas',
-    age: 28,
+    age: '28',
     id:  0
   }
 
-  newDate = new Date();
+  // newDate = new Date();
 
 
-  intro = 'Hello world how are you all ?'
+  // intro = 'Hello world how are you all ?'
 
   constructor(private httpService:  HttpService){
 
@@ -36,8 +36,8 @@ export class AppComponent {
 
   handleEvent(event: any){
     console.log(event)
-  });
+  };
 }
 
 
-}
+

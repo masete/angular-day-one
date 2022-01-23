@@ -9,5 +9,8 @@
 <button (click)= 'handleEvent()'>click us</button>
 <input placeholder="hello" [(ngModel)]= "title" (keydown)= 'handleEvent()'/> -->
 
+<input placeholder="name" [(ngModel)]="userObject.name" >
+<input placeholder="age" [(ngModel)]="userObject.age" >
+<input placeholder="id" [(ngModel)]="userObject.id" >
 
-<app-user [user]= "userObject" (userEvent)= "handleEvent($event)"></app-user>
+<app-user [user]= "userObject" (userCustomEvent)= "handleEvent($event)"></app-user>
