@@ -1,8 +1,9 @@
 <p>user works!</p>
 <h1>Use this in app component</h1>
 
-<h1>{{user.name}}</h1>
+<!-- <h1>{{user.name}}</h1>
 <h1>{{user.age}}</h1>
-<h1>{{user.id}}</h1>
+<h1>{{user.id}}</h1> -->
 
+<div [ngClass] = "isColored? 'colored':''" >Attribute Directive</div>
 <button (click)="sendUserEvent()">Send User Event</button>
