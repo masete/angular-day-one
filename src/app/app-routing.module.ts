@@ -9,7 +9,19 @@ const routes: Routes = [
   {path:'first', component: FirstComponent},
   {path:'second', component: SecondComponent},
   {path:'third', component: ThirdComponent},
-  {path:'fourth', component: FourthComponent}
+  {path:'fourth', component: FourthComponent},
+
+//setting up a redirect
+{
+  path: '',
+  redirectTo: '/first'
+},
+
+//setting up a wildcard
+  {
+    path: '**',
+    component: SecondComponent
+  }
 ];
 
 @NgModule({
