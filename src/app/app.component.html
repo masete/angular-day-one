@@ -13,4 +13,12 @@
 <input placeholder="age" [(ngModel)]="userObject.age" >
 <input placeholder="id" [(ngModel)]="userObject.id" >
 
-<app-user [user]= "userObject" (userCustomEvent)= "handleEvent($event)"></app-user>
+<ng-container *ngIf= "showUser">
+    <app-user [user]= "userObject" (userCustomEvent)= "handleEvent($event)"></app-user>
+</ng-container>
+
+<ul *ngFor= "let item for posts " | async>
+    <li>{{item.id}}</li>
+    <li>{{item.title}}</li>
+    <li>{{item.body}}</li>
+</ul>

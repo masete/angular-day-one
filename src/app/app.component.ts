@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpService } from './http.service';
 
 @Component({
@@ -25,6 +25,10 @@ export class AppComponent {
 
   // intro = 'Hello world how are you all ?'
 
+  showUser: boolean = true;
+
+  posts: any = this.httpService.getRequest('https://jsonplaceholder.typicode.com/post');
+
   constructor(private httpService:  HttpService){
 
   }
@@ -37,7 +41,17 @@ export class AppComponent {
 
   handleEvent(event: any){
     console.log(event)
-  };
+  }
+  // getPosts(): any{
+  //   this.httpService.getRequest('https://jsonplaceholder.typicode.com/post')
+  //   .subscribe((response)=>{
+  //     this.posts = response;
+
+    // })
+  // }
+  // ngOnInit() {
+    // this.getPosts();
+  // }
 }
 
 
