@@ -14,7 +14,8 @@ const routes: Routes = [
 //setting up a redirect
 {
   path: '',
-  redirectTo: '/first'
+  redirectTo: '/first',
+  pathMatch: 'full'
 },
 
 //setting up a wildcard

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { Router } from '@angular/router';
 import { HttpService } from './http.service';
 
 @Component({
@@ -6,12 +7,18 @@ import { HttpService } from './http.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   // title = 'This is angular for dummies';
   // jsonValue = {
   //   a: 'hello',
   //   b: 'world'
   // }
+  // constructor(private router: Router){}
+    // goToRoute(route: string): void{
+    //   this.router.navigateByUrl
+    // }
+  
 
   userObject = {
     name: 'Nicholas',
@@ -38,6 +45,10 @@ export class AppComponent {
   //   // this.jsonValue = response;
   //   console.log('hello')
   // });
+
+  // goToRoute(route: string): void{
+  //   this.router.navigateByUrl
+  // }
 
   handleEvent(event: any){
     console.log(event)
