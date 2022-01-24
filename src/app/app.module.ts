@@ -8,12 +8,20 @@ import { StorageService } from './storage.service';
 import { TruncatePipe } from './truncate.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './user/user.component';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+import { ThirdComponent } from './third/third.component';
+import { FourthComponent } from './fourth/fourth.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TruncatePipe,
-    UserComponent
+    UserComponent,
+    FirstComponent,
+    SecondComponent,
+    ThirdComponent,
+    FourthComponent
   ],
   imports: [
     BrowserModule,
