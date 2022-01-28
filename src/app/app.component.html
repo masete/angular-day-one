@@ -1,4 +1,4 @@
-<h1>{{title | uppercase}}</h1>
+<!-- <h1>{{title | uppercase}}</h1>
 <h1>{{jsonValue | json}}</h1>
 <h1>{{newDate | date:'medium'}}</h1>
 
@@ -7,4 +7,46 @@
 <h1>{{intro| truncate}}</h1>
 
 <button (click)= 'handleEvent()'>click us</button>
-<input placeholder="hello" [(ngModel)]= "title" (keydown)= 'handleEvent()'/>
+<input placeholder="hello" [(ngModel)]= "title" (keydown)= 'handleEvent()'/> -->
+
+<!-- <input placeholder="name" [(ngModel)]="userObject.name" >
+<input placeholder="age" [(ngModel)]="userObject.age" >
+<input placeholder="id" [(ngModel)]="userObject.id" >
+
+<ng-container *ngIf= "showUser">
+    <app-user [user]= "userObject" (userCustomEvent)= "handleEvent($event)"></app-user>
+</ng-container>
+
+<ul *ngFor= "let item for posts " | async>
+    <li>{{item.id}}</li>
+    <li>{{item.title}}</li>
+    <li>{{item.body}}</li>
+</ul>
+
+<router-outlet></router-outlet> -->
+
+<a routerLink='/first'>Go to first</a>
+<hr/>
+<a routerLink='/second'>Go to second</a>
+<hr/>
+<a routerLink='/third'>Go to third</a>
+<hr/>
+<a routerLink='/fourth'>Go to fourth</a>
+<hr/>
+
+
+<div class="split left">
+    <div class="centered">
+        <h2>Jane flex</h2>
+        <p>lorem ipsum text</p>
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <h2>John flex</h2>
+        <p>lorem ipsum text</p>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
